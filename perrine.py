@@ -2,7 +2,14 @@ import discord
 import os
 import subprocess
 import sys
+from dotenv import load_dotenv
 from neuralintents import GenericAssistant
+
+# Load the environment variables from the .env file
+load_dotenv()
+
+# Access the bot token from the environment variables
+bot_token = os.environ.get('BOT_TOKEN')
 
 MODEL_NAME = 'PERRINE'
 
